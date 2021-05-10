@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Esempio di Tree-Custom</title>
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/myStyle.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+	<script src="../../js/jQuery.js"></script>
+	<script src="../../js/dataTable.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-5">
+				<ul class="tree">
+					<li class="visibile root" id="1" onclick="apriChiudi('1');eseguiQuery('1')">
+						<i class="fa fa-arrow-right" aria-hidden="true"></i> Saggio</li>
+						<ul  class="1">
+							<li class="1 invisibile" id="1-1" onclick="apriChiudi('1-1');"> <i class="fa fa-arrow-right" aria-hidden="true"> La matematica del novecento</i> 
+								<ul class="1-1 invisibile">
+									<li><a>Autore: Piergiorgio Odifreddi</a></li>
+									<li><a>Anno: 2002</a></li>
+									<li><a>Genere: Matematica </a></li>
+								</ul>
+							</li>
+							<li class="1 invisibile" id="1-2"  onclick="apriChiudi('1-2');">
+								<i class="fa fa-arrow-right" aria-hidden="true"> L'infinito</i> 
+								<ul class="1-2 invisibile">
+									<li><a>Autore: John David Barrow</a></li> 
+									<li><a>Anno: 2005</a></li>
+									<li><a>Genere: Matematica </a></li>
+								</ul>
+							</li>
+						</ul>
+					
+					<li class="visibile root" id="2"  onclick="apriChiudi('2');eseguiQuery('2')">
+						<i class="fa fa-arrow-right" aria-hidden="true"></i>Giallo</li>
+						<ul  class="2">
+							<li class="2 invisibile" id="2-1"  onclick="apriChiudi('2-1');"><i class="fa fa-arrow-right" aria-hidden="true"> Il nome della rosa</i> 
+								<ul class="2-1 invisibile">
+									<li><a>Autore: Umberto Eco</a></li>
+									<li><a>Anno: 1980</a></li>
+									<li><a>Genere: Romanzo giallo </a></li>
+								</ul>
+							</li>
+							<li class="2 invisibile" id="2-2"  onclick="apriChiudi('2-2');"> <i class="fa fa-arrow-right" aria-hidden="true"> Il mastino dei Baskerville</i> 
+								<ul class="2-2 invisibile">
+									<li><a>Autore: Artur Conan Doyle</a></li>
+									<li><a>Anno: 1902</a></li>
+									<li><a>Genere: Romanzo giallo </a></li>
+								</ul>
+							</li>
+							<li class="2 invisibile" id="2-3" onclick="apriChiudi('2-3');"><i class="fa fa-arrow-right" aria-hidden="true"> Assassinio sull'Orient Express</i> 
+								<ul class="2-3 invisibile">
+									<li><a>Autore: Agatha Christie</a></li>
+									<li><a>Anno: 1934</a></li>
+									<li><a>Genere: Romanzo giallo </a></li>
+								</ul>
+							</li>
+						</ul>
+					<li class="visibile root" id="3"  onclick="apriChiudi('3');eseguiQuery('3')">
+						<i class="fa fa-arrow-right" aria-hidden="true"> </i> Horror</li>
+						<ul  class="3">
+							<li class="3 invisibile" id="3-1"  onclick="apriChiudi('3-1');"> <i class="fa fa-arrow-right" aria-hidden="true"> It</i> 
+								<ul class="3-1 invisibile">
+									<li><a>Autore: Stephen King</a></li>
+									<li><a>Anno: 1988</a></li>
+									<li><a>Genere: Horror </a></li>
+								</ul>
+							</li>
+							<li class="3 invisibile" id="3-2"  onclick="apriChiudi('3-2');"> <i class="fa fa-arrow-right" aria-hidden="true"> Frankenstein</i> 
+								<ul class="3-2 invisibile">
+									<li><a>Autore: Mary Shelley</a></li>
+									<li><a>Anno: 1823</a></li>
+									<li><a>Genere: Horror </a></li>
+								</ul>
+							</li>
+							<li class="3 invisibile" id="3-3"  onclick="apriChiudi('3-3');"><i class="fa fa-arrow-right" aria-hidden="true"> Dracula</i> 
+								<ul class="3-3 invisibile">
+									<li><a>Autore: Bram Stoker</a></li>
+									<li><a>Anno: 1897</a></li>
+									<li><a>Genere: Horror </a></li>
+								</ul>
+							</li>
+							<li class="3 invisibile" id="3-4"  onclick="apriChiudi('3-4');"><i class="fa fa-arrow-right" aria-hidden="true"> Rosemary's Baby</i> 
+								<ul class="3-4 invisibile">
+									<li><a>Autore: Ira Levin</a></li>
+									<li><a>Anno: 1967</a></li>
+									<li><a>Genere: Horror </a></li>
+								</ul>
+							</li>
+						</ul>
+					<li class="visibile root" id="4"  onclick="apriChiudi('4');eseguiQuery('4')">
+						<i class="fa fa-arrow-right" aria-hidden="true"></i> Fantasy</li>
+						<ul  class="4">
+							<li class="4 invisibile" id="4-1"  onclick="apriChiudi('4-1');"><i class="fa fa-arrow-right" aria-hidden="true"> Il Signore degli Anelli</i> 
+								<ul class="4-1 invisibile">
+									<li><a>Autore: J. R. R. Tolkien</a></li>
+									<li><a>Anno: 1955</a></li>
+									<li><a>Genere: Fantasia </a></li>
+								</ul>
+							</li>
+							<li class="4 invisibile" id="4-2"  onclick="apriChiudi('4-2');"> <i class="fa fa-arrow-right" aria-hidden="true"> Harry Potter e la pietra filosofale</i> 
+								<ul class="4-2 invisibile">
+									<li><a>Autore:J. K. Rowling</a></li>
+									<li><a>Anno: 1997</a></li>
+									<li><a>Genere: Fantasia </a></li>
+								</ul>
+							</li>
+							<li class="4 invisibile" id="4-3"  onclick="apriChiudi('4-3');"><i class="fa fa-arrow-right" aria-hidden="true">Il guardiano degli innocenti</i> 
+								<ul class="4-3 invisibile">
+									<li><a>Autore: Andrzej Sapkowski</a></li>
+									<li><a>Anno: 1993</a></li>
+									<li><a>Genere: Fantasia </a></li>
+								</ul>
+							</li>
+						</ul>
+				</ul>
+		</div>
+			<div class="col-7">
+				<div class="row">
+					<div class="col-12">
+						<table id="dataTab" class="table">
+							<thead>
+								<th>id</th>
+								<th>Titolo</th>
+								<th>Genere</th>
+								<th>Autore</th>
+								<th>Anno</th>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+</div>
+<script>
+	var table="";
+	function apriChiudi(id){
+		if($('.'+id).hasClass('visibile') && !$('.'+id).hasClass('root')){
+			$('.'+id).removeClass('visibile');
+			$('.'+id).addClass('invisibile');
+		}else if($('.'+id).hasClass('invisibile') && !$('.'+id).hasClass('root')){
+			$('.'+id).removeClass('invisibile');
+			$('.'+id).addClass('visibile');
+		}
+		cambiaLogo(id);
+	}
+
+	function cambiaLogo(id){
+		if($('#'+id+'>i').hasClass('fa fa-arrow-right')){
+			$('#'+id+'>i').removeClass('fa fa-arrow-right');
+			$('#'+id+'>i').addClass('fa fa-arrow-down');
+		}else if($('#'+id+'>i').hasClass('fa fa-arrow-down')){
+			$('#'+id+'>i').removeClass('fa fa-arrow-down');
+			$('#'+id+'>i').addClass('fa fa-arrow-right');
+		}
+		if($('#'+id+'>i').hasClass('fa fa-arrow-right') && $('#'+id).hasClass('root')){
+			table.clear().draw(false);
+		}
+	}
+
+	function eseguiQuery(id){
+		var autore="";
+		var titolo="";
+		var genere="";
+		var anno="";
+		var i=0;
+		var c=0;
+		table.clear().draw(false);
+		if($('#'+id).hasClass('root')){
+			var titoli=[];
+			$('ul.'+id+'>li>i').each(function(){
+				titoli[i]=$(this).text();
+				i++;
+			});
+			i=0;
+			$('ul.'+id+'>li>ul>li').each(function(){
+				if(i==0){
+					titolo=titoli[c];
+					autore=$(this).text();
+				}
+				if(i==1){
+					anno=$(this).text();	
+				}
+				if(i==2){
+					genere=$(this).text();	
+				}
+				if(i==2){
+					table.row.add([1,titolo,genere,autore,anno]).draw(false);
+
+				}
+				i++;
+				if(i==3){
+					i=0;
+					c++;
+				}
+			})
+		}else{
+			
+		}
+	}
+
+
+	$(document).ready(function(){
+		table=$('#dataTab').DataTable({
+			"language":{
+				"emptyTable":"Non ci sono risultati"
+			},
+			"paging":true
+		});
+
+
+
+	});
+</script>
+</body>
+</html>

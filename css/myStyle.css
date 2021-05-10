@@ -1,0 +1,15 @@
+.visibile{
+	display: block;
+}
+
+.invisibile{
+	display: none;
+}
+
+.root{
+	margin-top:2%;
+}
+
+#dataTab_filter>label{
+	float:right;
+}
